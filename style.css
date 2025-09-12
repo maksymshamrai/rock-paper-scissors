@@ -1,0 +1,89 @@
+.rps {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.rps-title {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.rps-container {
+  display: flex;
+  gap: 104px;
+  
+}
+.button-container {
+  display: flex;
+  gap: 38px;
+}
+.rps-result {
+  display: flex;
+  flex-direction: column;
+}
+.rps-result-text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%; /* 20.4px */
+}
+.rps-won {
+  color: #039900;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.rps-comp-variant {
+  background-color: #000000;
+  color: #FFF;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.rock {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 10px 5px;
+  width: 60px;
+  height: 60px;
+}
+.rock-image {
+  width: 40px;
+  height: 40px;
+}
+.paper {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 10px 5px;
+  width: 60px;
+  height: 60px;
+}
+.paper-image {
+  width: 40px;
+  height: 40px;
+}
+.scissors {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 10px 5px;
+  width: 60px;
+  height: 60px;
+}
+.scissors-image {
+  width: 40px;
+  height: 40px;
+}

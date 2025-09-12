@@ -7,26 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <section class="rps">
-        <h2 class="rps-title">Камінь - ножиці - папір</h2>
+      <h2 class="rps-title">Камінь - ножиці - папір</h2>
         <div class="rps-container">
+          <div class="button-container">
             <button class="rock">
-                <svg class="rock-icon" width="40" height="40">
-                    <use href="./symbol-defs.svg#icon-rock"></use>
-                </svg>
+                <img class="rock-image" src="./images/rock.png" alt="rock">
             </button>
             <button class="paper">
-                <svg class="paper-icon" width="40" height="40">
-                    <use href="./symbol-defs.svg#icon-paper"></use>
-                </svg>
+               <img class="paper-image" src="./images/paper.png" alt="paper">
             </button>
             <button class="scissors">
-                <svg class="scissors-icon" width="40" height="40">
-                    <use href="./symbol-defs.svg#icon-scissors"></use>
-                </svg>
+                <img class="scissors-image" src="./images/scissors.png" alt="scissors">
             </button>
+          </div>
             <div class="rps-result">
                 <p class="rps-result-text">Рахунок:</p>
                 <span class="rps-result-computer">Копмп'ютер - 0</span>
@@ -34,7 +31,8 @@
             </div>
         </div>
         <p class="rps-won">Ви виграли раунд!</p>
-        <span class="rps-comp-variant">Варіант комп'ютера</span>
+        <button class="rps-comp-variant">Варіант комп'ютера</button>
     </section>
+    <script src="./main.js"></script>
 </body>
 </html>
