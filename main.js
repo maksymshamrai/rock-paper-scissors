@@ -1,9 +1,7 @@
-console.log('Maksym Shamrai');
-
 let compScore = document.querySelector(".rps-result-computer");
 let userScore = document.querySelector(".rps-result-player");
 let showWinner = document.querySelector(".rps-won");
-let compButton = document.querySelector(".rps-comp-variant"); // кнопка "Варіант комп'ютера"
+let showComputerChoice = document.querySelector(".rps-comp-variant");
 
 let defaultUserScore = 0;
 let defaultComputerScore = 0;
@@ -11,43 +9,28 @@ let defaultComputerScore = 0;
 let userChoice;
 let compChoice;
 
-// обробники для кнопок гравця
 document.querySelector(".rock").onclick = function() {
     userChoice = "rock";
+    playGame();
 }
 document.querySelector(".paper").onclick = function() {
     userChoice = "paper";
+    playGame();
 }
 document.querySelector(".scissors").onclick = function() {
     userChoice = "scissors";
+    playGame();
 }
 
-// випадковий вибір комп'ютера
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     return choices[Math.floor(Math.random() * 3)];
 }
 
-// обробник для кнопки "Варіант комп'ютера"
-compButton.onclick = function() {
-    if (!userChoice) {
-        showWinner.textContent = "Спочатку зробіть свій вибір!";
-        return;
-    }
-
-    compChoice = getComputerChoice();
-    compButton.textContent = compChoice; // змінюємо текст кнопки на вибір комп’ютера
-    playGame();
-
-    // через 2 секунди повертаємо кнопку до початкового стану
-    setTimeout(() => {
-        compButton.textContent = "Варіант комп'ютера";
-        userChoice = null; // скидаємо вибір гравця, щоб він зробив новий
-    }, 2000);
-}
-
-// основна логіка гри
 function playGame() {
+    compChoice = getComputerChoice();
+    showComputerChoice.textContent = "Комп’ютер вибрав: " + compChoice;
+
     if (userChoice === compChoice) {
         showWinner.textContent = "Нічия!";
     } else if (
@@ -62,7 +45,6 @@ function playGame() {
         showWinner.textContent = "Комп’ютер переміг!";
     }
 
-    // оновлення рахунку
     userScore.textContent = defaultUserScore;
     compScore.textContent = defaultComputerScore;
 }
